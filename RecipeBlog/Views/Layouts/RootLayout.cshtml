@@ -1,0 +1,21 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IPageBase>
+
+<!doctype html>
+<html class="" lang="en-GB">
+<head>
+    @(await Component.InvokeAsync("HeadMeta", new { currentPage = Model }))
+</head>
+<body>
+    <header>
+        TODO - HEADER
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        TODO - FOOTER
+    </footer>
+</body>
+</html>

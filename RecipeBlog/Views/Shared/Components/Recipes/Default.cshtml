@@ -1,0 +1,11 @@
+@model List<RecipeBlog.Models.Generated.RecipePage>
+
+@if (!Model.Any())
+{
+    return;
+}
+
+@foreach (var recipe in Model)
+{
+    @Html.Partial("Recipe/Card", recipe)
+}
