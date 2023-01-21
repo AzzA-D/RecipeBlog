@@ -1,0 +1,9 @@
+@model Website.Models.Generated.RecipePage
+
+<div>
+    <a href="@Model.Url()">
+        View the
+        <h2>@(Model.Heading.IsNullOrWhiteSpace() ? Model.Name : Model.Heading)</h2>
+        recipe
+    </a>
+</div>
