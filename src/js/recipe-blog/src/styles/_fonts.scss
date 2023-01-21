@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Lora&display=swap');
+
+$primary: 'Crimson Text', serif;
+$secondary: 'Lora', serif;
+
+// Using Perfect-Fifth font scale: https://type-scale.com/
+// h1       h2      h3      h4      body    small
+// 122      81      54      36      24      16
+
+$h1-size: 122;
+$h1-lineheight: 100;
+
+$h2-size: 81;
+
+$h3-size: 54;
+$h3-lineheight: 44;
+
+$h4-size: 36;
+
+$body-size: 24;
+$body-lineheight: 24;

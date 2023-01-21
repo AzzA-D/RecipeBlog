@@ -1,0 +1,24 @@
+@use "../../styles/functions" as *;
+@use "../../styles/colours";
+@use '../../styles/fonts';
+
+.button {
+    text-decoration: none;
+    padding: toRem(8) toRem(16);
+    font-size: toRem(fonts.$body-size);
+
+    border: toRem(1) colours.$green solid;
+    color: colours.$green;
+    background-color: colours.$white;
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    & > span {
+        margin-top: toRem(8);
+
+    }
+
+    &:hover {
+        color: colours.$white;
+        background-color: colours.$green;
+    }
+}

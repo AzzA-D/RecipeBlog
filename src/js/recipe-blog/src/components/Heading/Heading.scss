@@ -1,0 +1,23 @@
+@use '../../styles/functions' as *;
+@use '../../styles/fonts';
+
+.heading {
+    font-family: fonts.$primary;
+    margin: 0;
+}
+
+h1 {
+    font-size: toRem(fonts.$h1-size);
+}
+
+h2 {
+    font-size: toRem(fonts.$h2-size);
+}
+
+h3 {
+    font-size: toRem(fonts.$h3-size);
+}
+
+h4 {
+    font-size: toRem(fonts.$h4-size);
+}

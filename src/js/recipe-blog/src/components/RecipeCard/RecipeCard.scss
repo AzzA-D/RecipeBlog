@@ -1,0 +1,18 @@
+@use "../../styles/functions" as *;
+@use "../../styles/colours";
+@use "../../styles/fonts";
+
+.recipe-card {
+    width: 100%;
+    border: toRem(1) colours.$grey solid;
+    display: flex;
+}
+
+.recipe-card__body {
+    flex-grow: 1;
+    margin: toRem(32);
+}
+
+.recipe-card__description {
+    margin-bottom: toRem(32);
+}

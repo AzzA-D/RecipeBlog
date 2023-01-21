@@ -1,0 +1,7 @@
+@use '../../styles/functions' as *;
+
+.recipe-list {
+    .recipe-card + .recipe-card {
+        margin-top: toRem(16);
+    }
+}

@@ -1,0 +1,8 @@
+@use '../../styles/functions' as *;
+@use '../../styles/colours';
+
+.page-heading {
+    background-color: colours.$green;
+    color: colours.$white;
+    padding: toRem(128) toRem(128) toRem(128) toRem(64);
+}

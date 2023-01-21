@@ -1,0 +1,7 @@
+@use '../../styles/functions' as *;
+@use '../../styles/fonts';
+
+.body-text {
+    font-size: toRem(fonts.$body-size);
+    margin-bottom: toRem(16);
+}
