@@ -1,47 +1,11 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<RecipePage>
+@using Umbraco.Cms.Core.Mapping;
+@using Website.Models.Json;
+@inject IUmbracoMapper _mapper;
+
 @{
     Layout = "~/Views/Layouts/RootLayout.cshtml";
+    var json = _mapper.Map<RecipePageJson>(Model);
 }
 
-<section>
-    <h1>@(Model.Heading.IsNullOrWhiteSpace() ? Model.Name : Model.Heading)</h1>
-</section>
-
-<section>
-    <div>@Model.Description</div>
-</section>
-
-@* TODO - Abstract this into view model *@
-@* TODO - Add default headings *@
-<section>
-    @foreach (var ingredientsSection in Model.Ingredients.Select(bl => bl.Content).Cast<IngredientsSection>())
-    {
-        <div>
-            <h2>@ingredientsSection.Heading</h2>
-            @foreach (var ingredient in ingredientsSection.Ingredients.Select(bl => bl.Content).Cast<Ingredient>())
-            {
-                <dl>
-                    <dt>@ingredient.Description</dt>
-                    <dd>@ingredient.Measurement</dd>
-                </dl>
-            }
-        </div>
-    }
-</section>
-
-@* TODO - Abstract this into view model *@
-@* TODO - Add default headings *@
-<section>
-    @foreach (var methodSection in Model.Method.Select(bl => bl.Content).Cast<MethodSection>())
-    {
-        <div>
-            <h2>@methodSection.Heading</h2>
-            <ol>
-                @foreach (var step in methodSection.Steps.Select(bl => bl.Content).Cast<Method>())
-                {
-                    <li>@step.Description</li>
-                }
-            </ol>
-        </div>
-    }
-</section>
+<div id="react-root" data-page="RecipePage" data-props='@Json.Serialize(json)'>Please enable JavaScript to view this content</div>

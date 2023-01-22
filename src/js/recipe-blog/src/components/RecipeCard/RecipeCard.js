@@ -8,10 +8,12 @@ function RecipeCard(props) {
     return (
         <div className="recipe-card">
             <div className="recipe-card__media">
-                <Image
-                    src={props.image.url}
-                    alt={props.image.altText}
-                />
+                {props.Image &&
+                    <Image
+                        src={props.image.url}
+                        alt={props.image.altText}
+                    />
+                }
             </div>
             <div className="recipe-card__body">
                 <Heading

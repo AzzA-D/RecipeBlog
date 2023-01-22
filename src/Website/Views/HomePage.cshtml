@@ -1,8 +1,11 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomePage>
+@using Umbraco.Cms.Core.Mapping;
+@using Website.Models.Json;
+@inject IUmbracoMapper _mapper;
+
 @{
     Layout = "~/Views/Layouts/RootLayout.cshtml";
-
-    var recipesFolder = Model.FirstChildOfType(Recipes.ModelTypeAlias);
+    var json = _mapper.Map<HomePageJson>(Model);
 }
 
-@(await Component.InvokeAsync("Recipes", new { recipesFolder = recipesFolder, amount = 3 }))
+<div id="react-root" data-page="HomePage" data-props='@Json.Serialize(json)'>Please enable JavaScript to view this content</div>

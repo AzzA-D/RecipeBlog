@@ -7,6 +7,16 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\.editorconfig" Link=".editorconfig" />
+    <None Include="wwwroot\dist\favicon.ico" />
+    <None Include="wwwroot\dist\index.html" />
+    <None Include="wwwroot\dist\logo192.png" />
+    <None Include="wwwroot\dist\logo512.png" />
+    <None Include="wwwroot\dist\robots.txt" />
+    <None Include="wwwroot\dist\static\css\main.9f789b78.css" />
+    <None Include="wwwroot\dist\static\css\main.9f789b78.css.map" />
+    <None Include="wwwroot\dist\static\js\main.4e5bb871.js" />
+    <None Include="wwwroot\dist\static\js\main.4e5bb871.js.LICENSE.txt" />
+    <None Include="wwwroot\dist\static\js\main.4e5bb871.js.map" />
   </ItemGroup>
 
   <ItemGroup>
