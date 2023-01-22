@@ -50,12 +50,20 @@ namespace Website.Models.Generated
 		// properties
 
 		///<summary>
-		/// Description: Defaults to the name of the node if not specified
+		/// Amount
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("description")]
-		public virtual string Description => this.Value<string>(_publishedValueFallback, "description");
+		[ImplementPropertyType("amount")]
+		public virtual string Amount => this.Value<string>(_publishedValueFallback, "amount");
+
+		///<summary>
+		/// Ingredient
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("ingredientName")]
+		public virtual string IngredientName => this.Value<string>(_publishedValueFallback, "ingredientName");
 
 		///<summary>
 		/// Measurement

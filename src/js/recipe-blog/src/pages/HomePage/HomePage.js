@@ -5,7 +5,7 @@ function HomePage(props) {
     return (
         <div>
             <PageHeading text={props.heading} level={1} />
-            <RecipeList recipes={props.recipes} />
+            <RecipeList text={props.recipesListHeading} recipes={props.recipes} />
         </div>
     );
 }

@@ -4,6 +4,7 @@ function HomePageExample() {
     return (
         <HomePage
             heading="Welcome to the Recipe Blog!"
+            recipesListHeading="Some of our best recipes"
             recipes={[
                 {
                     heading: "Pizza",

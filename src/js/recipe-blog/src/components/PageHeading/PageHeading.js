@@ -8,6 +8,11 @@ function PageHeading(props) {
                 text={props.text}
                 level={1}
             />
+            {props.subheading &&
+                <div className="page-heading__subheading">
+                    <p>{props.subheading}</p>
+                </div>
+            }
         </section>
     );
 }

@@ -1,8 +1,13 @@
 @use '../../styles/functions' as *;
 @use '../../styles/colours';
+@use '../../styles/fonts';
 
 .page-heading {
     background-color: colours.$green;
     color: colours.$white;
     padding: toRem(128) toRem(128) toRem(128) toRem(64);
+
+    &__subheading {
+        font-size: toRem(fonts.$body-size);
+    }
 }
