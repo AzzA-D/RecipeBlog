@@ -5,7 +5,9 @@
 .button {
     text-decoration: none;
     padding: toRem(8) toRem(16);
-    font-size: toRem(fonts.$body-size);
+
+    font-family: fonts.$primary;
+    font-size: toRem(fonts.$mobile-body-size);
 
     border: toRem(1) colours.$green solid;
     color: colours.$green;

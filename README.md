@@ -23,7 +23,6 @@ yarn build
 ## TODO
 
 - Styling
-- Fonts
 - Dynamic update of asset URLs from manifest file
 - Server-side rendering of React
 - Exclude specific nodes from uSync
@@ -35,3 +34,4 @@ yarn build
 - Block list editor for Recipe body
 - Azure blob storage 
 - 'Category' pages containing recipes built from list of tags tag
+- Init header and footer as part of Umbraco site

@@ -4,7 +4,7 @@ import Heading from '../Heading/Heading';
 function Method(props) {
     return (
         <section className="method">
-            <Heading text={props.heading} level={2} />
+            <Heading text={props.heading} level={2} theme={Heading.Themes.Secondary} />
 
             {props.sections.map((section, i) =>
                 <MethodSection {...section} key={i} />
@@ -17,7 +17,7 @@ function MethodSection(props) {
     return (
         <div className="method-section">
             {props.heading &&
-                <Heading text={props.heading} level={3} />
+                <Heading text={props.heading} level={3} theme={Heading.Themes.Secondary} />
             }
             <ol className="method-steps-list">
                 {props.steps.map((step, i) =>

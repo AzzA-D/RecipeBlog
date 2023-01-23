@@ -1,0 +1,23 @@
+@use '../../styles/functions' as *;
+@use '../../styles/breakpoints' as *;
+@use '../../styles/colours';
+@use '../../styles/fonts';
+
+.header {
+    height: 0;
+
+    &__body {
+        padding: toRem(12);
+    }
+
+    .logo {
+        color: colours.$white;
+        text-decoration: none;
+        font-family: fonts.$primary;
+        font-size: toRem(fonts.$mobile-h3-size);
+
+        @include desktop {
+            font-size: toRem(fonts.$desktop-h3-size);
+        }
+    }
+}

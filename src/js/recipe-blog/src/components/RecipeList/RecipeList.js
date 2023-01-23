@@ -5,7 +5,7 @@ import "./RecipeList.scss";
 function RecipeList(props) {
     return (
         <section className="recipe-list">
-            <Heading text={props.heading} level={2} />
+            <Heading text={props.heading} level={2} theme={Heading.Themes.Secondary} />
             {props.recipes.map((recipe, i) =>
                 <RecipeCard
                     {...recipe}

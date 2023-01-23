@@ -5,6 +5,8 @@ import App from './App';
 
 import HomePage from './pages/HomePage/HomePage';
 import RecipePage from './pages/RecipePage/RecipePage';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 const rootNode = document.getElementById('react-root');
 const pageAttr = rootNode.getAttribute("data-page");
@@ -17,14 +19,18 @@ switch (pageAttr) {
     case 'HomePage':
         root.render(
             <React.StrictMode>
+                <Header websiteName="Aaron's Recipes" />
                 <HomePage {...props} />
+                <Footer />
             </React.StrictMode>
         );
         break;
     case 'RecipePage':
         root.render(
             <React.StrictMode>
+                <Header websiteName="Aaron's Recipes" />
                 <RecipePage {...props} />
+                <Footer />
             </React.StrictMode>
         );
         break;

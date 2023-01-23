@@ -4,7 +4,7 @@ import Heading from "../Heading/Heading";
 function Ingredients(props) {
     return (
         <section className="ingredients">
-            <Heading text={props.heading} level={2} />
+            <Heading text={props.heading} level={2} theme={Heading.Themes.Secondary} />
             {props.sections.map((section, i) =>
                 <IngredientsSection {...section} key={i} />
             )}
@@ -16,7 +16,7 @@ function IngredientsSection(props) {
     return (
         <div className="ingredients__section">
             {props.heading &&
-                <Heading text={props.heading} level={3} />
+                <Heading text={props.heading} level={3} theme={Heading.Themes.Secondary} />
             }
             <ul className="ingredients-list">
                 {props.ingredients.map((ingredient, i) =>

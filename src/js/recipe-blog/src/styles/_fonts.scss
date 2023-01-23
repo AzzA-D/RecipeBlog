@@ -1,21 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Josefin+Sans:wght@200;300;400&family=Lora&display=swap');
 
-$primary: 'Crimson Text', serif;
-$secondary: 'Lora', serif;
+$primary: 'Josefin Sans', sans-serif;
+$secondary: 'Crimson Text', serif;
 
 // Using Perfect-Fifth font scale: https://type-scale.com/
 // h1       h2      h3      h4      body    small
 // 122      81      54      36      24      16
 
-$h1-size: 122;
-$h1-lineheight: 100;
+// h1
+$mobile-h1-size: 54;
+$mobile-h1-lineheight: 44;
 
-$h2-size: 81;
+$desktop-h1-size: 122;
+$desktop-h1-lineheight: 100;
 
-$h3-size: 54;
-$h3-lineheight: 44;
+// h2
+$mobile-h2-size: 36;
+$mobile-h2-lineheight: 28;
 
-$h4-size: 36;
+$desktop-h2-size: 81;
+$desktop-h2-lineheight: 60;
 
-$body-size: 24;
-$body-lineheight: 24;
+// h3
+$mobile-h3-size: 24;
+$mobile-h3-lineheight: 24;
+
+$desktop-h3-size: 54;
+$desktop-h3-lineheight: 44;
+
+// h4
+$mobile-h4-size: 16;
+$mobile-h4-lineheight: 16;
+
+$desktop-h4-size: 36;
+$desktop-h4-lineheight: 28;
+
+// body
+$mobile-body-size: 20;
+$mobile-body-lineheight: 20;
+
+$desktop-body-size: 24;
+$desktop-body-lineheight: 24;

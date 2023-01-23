@@ -1,0 +1,22 @@
+@use '../../styles/functions' as *;
+@use '../../styles/breakpoints' as *;
+@use '../../styles/fonts';
+
+.method {
+    margin-top: toRem(24);
+}
+
+.method-steps-list {
+    padding-left: toRem(24);
+}
+
+.step {
+    & > p {
+        margin: toRem(8) 0;
+        font-size: toRem(fonts.$mobile-body-size);
+
+        @include desktop {
+            font-size: toRem(fonts.$desktop-body-size);
+        }
+    }
+}

@@ -3,6 +3,10 @@ import './Heading.scss';
 function Heading(props) {
     let className = "heading";
 
+    if (props.theme === Heading.Themes.Secondary) {
+        className += " heading--secondary";
+    }
+
     switch (props.level) {
         case 1:
             return (
@@ -23,5 +27,10 @@ function Heading(props) {
             );
     }
 }
+
+Heading.Themes = {
+    Primary: 'primary',
+    Secondary: 'secondary'
+};
 
 export default Heading;

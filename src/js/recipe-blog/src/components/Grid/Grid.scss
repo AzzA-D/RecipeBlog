@@ -1,0 +1,6 @@
+@use '../../styles/functions' as *;
+@use '../../styles/breakpoints' as *;
+
+.grid {
+    margin: 0 toRem(28);
+}

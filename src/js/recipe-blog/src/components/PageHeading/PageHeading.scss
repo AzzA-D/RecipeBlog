@@ -1,13 +1,23 @@
 @use '../../styles/functions' as *;
+@use '../../styles/breakpoints' as *;
 @use '../../styles/colours';
 @use '../../styles/fonts';
 
 .page-heading {
     background-color: colours.$green;
     color: colours.$white;
-    padding: toRem(128) toRem(128) toRem(128) toRem(64);
+    padding: toRem(72) toRem(28) toRem(32) toRem(28);
+
+    @include desktop {
+        padding: toRem(128) toRem(128) toRem(72) toRem(64);
+    }
 
     &__subheading {
-        font-size: toRem(fonts.$body-size);
+        font-family: fonts.$secondary;
+        font-size: toRem(fonts.$mobile-body-size);
+
+        @include desktop {
+            font-size: toRem(fonts.$desktop-body-size);
+        }
     }
 }

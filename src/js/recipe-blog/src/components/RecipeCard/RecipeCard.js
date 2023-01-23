@@ -19,6 +19,7 @@ function RecipeCard(props) {
                 <Heading
                     text={props.heading}
                     level={3}
+                    theme={Heading.Themes.Secondary}
                 />
                 <BodyText
                     text={props.description}

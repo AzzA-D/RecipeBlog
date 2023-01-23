@@ -1,23 +1,51 @@
 @use '../../styles/functions' as *;
+@use '../../styles/breakpoints' as *;
 @use '../../styles/fonts';
+@use '../../styles/colours';
 
 .heading {
     font-family: fonts.$primary;
     margin: 0;
+
+    &--secondary {
+        color: colours.$green;
+    }
 }
 
 h1 {
-    font-size: toRem(fonts.$h1-size);
+    font-size: toRem(fonts.$mobile-h1-size);
+    font-weight: 200;
 }
 
 h2 {
-    font-size: toRem(fonts.$h2-size);
+    font-size: toRem(fonts.$mobile-h2-size);
+    font-weight: 200;
 }
 
 h3 {
-    font-size: toRem(fonts.$h3-size);
+    font-size: toRem(fonts.$mobile-h3-size);
+    font-weight: 300;
 }
 
 h4 {
-    font-size: toRem(fonts.$h4-size);
+    font-size: toRem(fonts.$mobile-h4-size);
+    font-weight: 300;
+}
+
+@include desktop {
+    h1 {
+        font-size: toRem(fonts.$desktop-h1-size);
+    }
+
+    h2 {
+        font-size: toRem(fonts.$desktop-h2-size);
+    }
+
+    h3 {
+        font-size: toRem(fonts.$desktop-h3-size);
+    }
+
+    h4 {
+        font-size: toRem(fonts.$desktop-h4-size);
+    }
 }
