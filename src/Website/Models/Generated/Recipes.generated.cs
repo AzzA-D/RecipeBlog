@@ -48,5 +48,29 @@ namespace Website.Models.Generated
 		}
 
 		// properties
+
+		///<summary>
+		/// Ingredients Section Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("ingredientsSectionHeading")]
+		public virtual string IngredientsSectionHeading => this.Value<string>(_publishedValueFallback, "ingredientsSectionHeading");
+
+		///<summary>
+		/// Method Section Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("methodSectionHeading")]
+		public virtual string MethodSectionHeading => this.Value<string>(_publishedValueFallback, "methodSectionHeading");
+
+		///<summary>
+		/// More Recipes Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("moreRecipesHeading")]
+		public virtual string MoreRecipesHeading => this.Value<string>(_publishedValueFallback, "moreRecipesHeading");
 	}
 }

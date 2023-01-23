@@ -12,9 +12,9 @@ namespace Website.Mapping
                 (source, context) => new HomePageJson(),
                 (source, target, context) =>
                 {
-                    target.Heading = "TODO";
+                    target.Heading = source.PageHeading;
 
-                    target.RecipesListsHeading = "TODO";
+                    target.RecipesListsHeading = source.RecipeListHeading;
                     var recipePages = source.DescendantsOfType(RecipePage.ModelTypeAlias).Cast<RecipePage>().ToList();
                     target.Recipes = mapper.MapEnumerable<RecipePage, RecipeCardJson>(recipePages);
                 }
@@ -35,19 +35,21 @@ namespace Website.Mapping
                 (source, context) => new RecipePageJson(),
                 (source, target, context) =>
                 {
+                    var recipePage = source.Parent<Recipes>();
+
                     target.Heading = source.Heading.IsNullOrWhiteSpace() ? source.Name : source.Heading;
                     target.Subheading = source.Description;
                     target.Ingredients = new IngredientsJson
                     {
-                        Heading = "TODO",
+                        Heading = recipePage.IngredientsSectionHeading,
                         Sections = mapper.MapEnumerable<IngredientsSection, IngredientsSectionJson>(source.Ingredients.Select(i => i.Content as IngredientsSection))
                     };
                     target.Method = new MethodJson
                     {
-                        Heading = "TODO",
+                        Heading = recipePage.MethodSectionHeading,
                         Sections = mapper.MapEnumerable<MethodSection, MethodSectionJson>(source.Method.Select(m => m.Content as MethodSection))
                     };
-                    target.MoreRecipesHeading = "TODO";
+                    target.MoreRecipesHeading = recipePage.MoreRecipesHeading;
                     target.MoreRecipes = new List<RecipeCardJson>();
                 }
             );

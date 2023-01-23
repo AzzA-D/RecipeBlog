@@ -50,6 +50,22 @@ namespace Website.Models.Generated
 		// properties
 
 		///<summary>
+		/// Page Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("pageHeading")]
+		public virtual string PageHeading => this.Value<string>(_publishedValueFallback, "pageHeading");
+
+		///<summary>
+		/// Recipe List Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("recipeListHeading")]
+		public virtual string RecipeListHeading => this.Value<string>(_publishedValueFallback, "recipeListHeading");
+
+		///<summary>
 		/// Website Name: Used in the title in the browser window.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]

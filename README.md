@@ -29,3 +29,6 @@ To build the front-end of the site for local development, run the following:
 - Randomly surface recipes on home page
 - 'In season' date range for ingredients to flag recipes in season
 - Related recipes - 'Things that go with {X}}'
+- Block list editor for Recipe body
+- Azure blob storage 
+- 'Category' pages containing recipes built from list of tags tag
