@@ -14,14 +14,17 @@ yarn
 yarn start
 ```
 
-To build the front-end of the site for local development, run the following:
+To build the front-end of the site for local development, the following will build:
 ```
+cd src/js/recipe-blog
+yarn build
 ```
 
 ## TODO
 
 - Styling
 - Fonts
+- Dynamic update of asset URLs from manifest file
 - Server-side rendering of React
 - Exclude specific nodes from uSync
 - Measurement conversion
