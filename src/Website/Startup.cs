@@ -33,6 +33,7 @@ namespace Website
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
+                .AddAzureBlobMediaFileSystem()
                 .Build();
         }
 
