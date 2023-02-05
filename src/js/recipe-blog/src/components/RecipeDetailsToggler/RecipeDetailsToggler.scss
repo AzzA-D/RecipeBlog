@@ -4,8 +4,8 @@
 @use '../../styles/colours';
 @use '../../styles/fonts';
 
-$button-size: 40;
-$button-width-with-extra: $button-size + 16;
+$button-width: 56;
+$button-radius: 25px;
 
 .recipe-details-toggler {
     position: relative;
@@ -19,13 +19,13 @@ $button-width-with-extra: $button-size + 16;
     }
 
     &__ingredients {
-        margin-right: toRem($button-size);
-        width: calc(100% - toRem($button-size));
+        margin-right: toRem($button-width);
+        width: calc(100% - toRem($button-width));
     }
 
     &__method {
-        margin-left: toRem($button-size);
-        width: calc(100% - toRem($button-size));
+        margin-left: toRem($button-width);
+        width: calc(100% - toRem($button-width));
 
         background-color: colours.$white;
         position: absolute;
@@ -40,47 +40,57 @@ $button-width-with-extra: $button-size + 16;
         }
     }
 
-    $button-radius: 16px;
-
     &__open-button {
         position: absolute;
         top: 0;
-        left: calc(100vw - toRem($button-width-with-extra));
+        left: calc(100% - toRem($button-width));
         height: 100%;
-        border: none;
-        width: toRem($button-size);
+        width: toRem($button-width);
+        background-color: colours.$white;
+        transition: left 0.2s $transition;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        & button {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border: none;
+            width: 100%;
 
-        color: colours.$white;
-        background: colours.$green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        transition: all 0.2s $transition;
+            color: colours.$green;
+            background: colours.$white;
 
-        border: colours.$green 1px solid;
-        border-radius: $button-radius;
-        border-top-right-radius: 0;
-        border-right: none;
-        border-bottom-right-radius: 0;
+            transition: all 0.2s $transition;
+
+            border: colours.$green 2px solid;
+            border-radius: $button-radius;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right-width: 0;
+
+            > span {
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                line-height: 0;
+                width: 0;
+            }
+        }
 
         &.is-open {
             left: 0;
 
-            border-left: none;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            border-right: solid;
-            border-top-right-radius: $button-radius;
-            border-bottom-right-radius: $button-radius;
-        }
-
-        span {
-            writing-mode: vertical-lr;
-            text-orientation: upright;
-            line-height: 0;
-            width: 0;
+            & button {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: $button-radius;
+                border-bottom-right-radius: $button-radius;
+                border-right-width: 2px;
+                border-left-width: 0;
+            }
         }
     }
 }
