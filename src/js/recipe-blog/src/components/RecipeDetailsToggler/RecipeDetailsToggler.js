@@ -15,16 +15,16 @@ function RecipeDetailsToggler(props) {
                     <Ingredients {...props.ingredients} />
                 </Grid>
             </div>
+            <button
+                className={`recipe-details-toggler__open-button ${isOpen ? 'is-open' : ''}`}
+                type="button"
+                onClick={() => {
+                    setIsOpen(!isOpen);
+                }}
+            >
+                <span>{isOpen ? 'INGREDIENTS' : 'METHOD'}</span>
+            </button>
             <div className={`recipe-details-toggler__method ${isOpen ? 'is-open' : ''}`}>
-                <button
-                    className='recipe-details-toggler__open-button'
-                    type="button"
-                    onClick={() => {
-                        setIsOpen(!isOpen);
-                    }}
-                >
-                    <span>{isOpen ? 'INGREDIENTS' : 'METHOD'}</span>
-                </button>
                 <Grid>
                     <Method {...props.method} />
                 </Grid>
