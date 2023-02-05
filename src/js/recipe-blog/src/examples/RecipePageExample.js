@@ -98,7 +98,85 @@ function RecipePageExample() {
                                 ingredient: 'salt'
                             }
                         ]
-                    }
+                    },
+                    {
+                        heading: 'Some more example ingredients',
+                        ingredients: [
+                            {
+                                ingredient: 'Butternut squash',
+                                amount: '4',
+                                measurement: 'cups'
+                            },
+                            {
+                                ingredient: 'Red lentils',
+                                amount: '2',
+                                measurement: 'cups'
+                            },
+                            {
+                                ingredient: 'Onion',
+                                amount: '1',
+                            },
+                            {
+                                ingredient: 'Garlic',
+                                amount: '2',
+                                measurement: 'cloves'
+                            },
+                            {
+                                ingredient: 'Red chilli peppers',
+                                amount: '2',
+                            },
+                            {
+                                ingredient: 'Fresh ginger',
+                                amount: '2',
+                                measurement: 'tablespoons'
+                            },
+                            {
+                                ingredient: 'Curry powder',
+                                amount: '1',
+                                measurement: 'tablespoon'
+                            },
+                            {
+                                ingredient: 'Ground coriander',
+                                amount: '2',
+                                measurement: 'teaspoons'
+                            },
+                            {
+                                ingredient: 'Garam masala',
+                                amount: '2',
+                                measurement: 'teaspoons'
+                            },
+                            {
+                                ingredient: 'Turmeric',
+                                amount: '2',
+                                measurement: 'teaspoons'
+                            },
+                            {
+                                ingredient: 'Ground cumin',
+                                amount: '2',
+                                measurement: 'teaspoons'
+                            },
+                            {
+                                ingredient: 'Salt',
+                                amount: '1',
+                                measurement: 'teaspoon'
+                            },
+                            {
+                                ingredient: 'Coconut milk',
+                                amount: '1',
+                                measurement: 'can'
+                            },
+                            {
+                                ingredient: 'Diced tomatoes',
+                                amount: '1',
+                                measurement: 'can'
+                            },
+                            {
+                                ingredient: 'Stock',
+                                amount: '750',
+                                measurement: 'ml'
+                            }
+                        ]
+                    },
                 ]
             }}
 
@@ -127,7 +205,42 @@ function RecipePageExample() {
                                 description: "<p>Serve with a lime wedge, rice and naan bread.</p>",
                             }
                         ]
-                    }
+                    },
+                    {
+                        heading: "Some more example steps",
+                        steps: [
+                            {
+                                description: "<p>Finely chop onion, garlic and chili peppers.</p><p>Cube butternut squash.</p><p>Grate ginger.</p>",
+                            },
+                            {
+                                description: "<p>Pop all of the ingredients apart from lime in your slow cooker.</p>",
+                            }
+                            ,
+                            {
+                                description: "<p>Cook on low for 6-8 hours, or high for 4-6 hours.</p>",
+                            },
+                            {
+                                description: "<p>Finely chop onion, garlic and chili peppers.</p><p>Cube butternut squash.</p><p>Grate ginger.</p>",
+                            },
+                            {
+                                description: "<p>Pop all of the ingredients apart from lime in your slow cooker.</p>",
+                            }
+                            ,
+                            {
+                                description: "<p>Cook on low for 6-8 hours, or high for 4-6 hours.</p>",
+                            },
+                            {
+                                description: "<p>Finely chop onion, garlic and chili peppers.</p><p>Cube butternut squash.</p><p>Grate ginger.</p>",
+                            },
+                            {
+                                description: "<p>Pop all of the ingredients apart from lime in your slow cooker.</p>",
+                            }
+                            ,
+                            {
+                                description: "<p>Cook on low for 6-8 hours, or high for 4-6 hours.</p>",
+                            }
+                        ]
+                    },
                 ]
             }}
 

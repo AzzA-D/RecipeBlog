@@ -32,6 +32,6 @@ yarn build
 - 'In season' date range for ingredients to flag recipes in season
 - Related recipes - 'Things that go with {X}}'
 - Block list editor for Recipe body
-- Azure blob storage 
+- ~~Azure blob storage~~ 
 - 'Category' pages containing recipes built from list of tags tag
 - Init header and footer as part of Umbraco site

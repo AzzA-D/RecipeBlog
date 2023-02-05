@@ -1,0 +1,80 @@
+@use '../../styles/functions' as *;
+@use '../../styles/breakpoints' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/colours';
+@use '../../styles/fonts';
+
+$button-size: 40;
+
+.recipe-details-toggler {
+    position: relative;
+    height: 90vh;
+    overflow-x: hidden;
+
+    border: colours.$green 1px solid;
+    border-left: none;
+    border-right: none;
+
+    &__ingredients,
+    &__method {
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    &__ingredients {
+        margin-right: toRem($button-size);
+    }
+
+    &__method {
+        background-color: #fff;
+        position: absolute;
+        display: inline-flex;
+        top: 0;
+        left: calc(100% - toRem($button-size));
+        width: 100%;
+
+        transition: left 0.2s $transition;
+
+        &.is-open {
+            left: 0;
+        }
+    }
+
+    $button-radius: 25;
+
+    &__open-button {
+        position: sticky;
+        height: 100%;
+        top: 0;
+        border: none;
+        width: toRem($button-size + $mobile-grid-margin);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: colours.$white;
+        background: colours.$green;
+
+        border: colours.$green 1px solid;
+        border-radius: toRem($button-radius);
+        border-top-right-radius: 0;
+        border-right: none;
+        border-bottom-right-radius: 0;
+
+        .is-open & {
+            border-left: none;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-right: solid;
+            border-top-right-radius: toRem($button-radius);
+            border-bottom-right-radius: toRem($button-radius);
+        }
+
+        span {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            line-height: 0;
+            width: 0;
+        }
+    }
+}

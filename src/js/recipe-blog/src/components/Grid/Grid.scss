@@ -1,6 +1,7 @@
 @use '../../styles/functions' as *;
 @use '../../styles/breakpoints' as *;
+@use '../../styles/variables' as *;
 
 .grid {
-    margin: 0 toRem(28);
+    margin: 0 toRem($mobile-grid-margin);
 }

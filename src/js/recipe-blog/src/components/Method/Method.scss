@@ -3,11 +3,17 @@
 @use '../../styles/fonts';
 
 .method {
-    margin-top: toRem(24);
-}
+    &-steps-list {
+        padding-left: toRem(24);
+    }
 
-.method-steps-list {
-    padding-left: toRem(24);
+    &-step + &-step {
+        padding-top: toRem(32);
+    }
+
+    &-section + &-section {
+        padding-top: toRem(64);
+    }
 }
 
 .step {

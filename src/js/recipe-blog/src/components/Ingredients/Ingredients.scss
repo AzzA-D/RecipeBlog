@@ -3,13 +3,11 @@
 @use '../../styles/fonts';
 
 .ingredients {
-    margin-top: toRem(24);
-}
+    &-list {
+        padding-left: toRem(24);
 
-.ingredients-list {
-    padding-left: toRem(24);
-
-    &__item {}
+        &__item {}
+    }
 }
 
 .ingredient {
