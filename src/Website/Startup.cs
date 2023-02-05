@@ -1,3 +1,5 @@
+using Website.App_Start;
+
 namespace Website
 {
     public class Startup
@@ -35,6 +37,8 @@ namespace Website
                 .AddComposers()
                 .AddAzureBlobMediaFileSystem()
                 .Build();
+
+            DependencyInjection.RegisterServices(services);
         }
 
         /// <summary>

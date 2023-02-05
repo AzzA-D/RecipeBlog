@@ -1,12 +1,13 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IPageBase>
+@inject Website.Services.AssetsService _assetsService;
 
 <!doctype html>
 <html class="" lang="en-GB">
 <head>
     @(await Component.InvokeAsync("HeadMeta", new { currentPage = Model }))
 
-    <script defer="defer" src="/dist/static/js/main.1e474f77.js"></script>
-    <link href="/dist/static/css/main.9bde9a90.css" rel="stylesheet">
+    <script src="@_assetsService.GetFileLocationFromManifest("main.js")" defer="defer"></script>
+    <link href="@_assetsService.GetFileLocationFromManifest("main.css")" rel="stylesheet">
 
 </head>
 <body>

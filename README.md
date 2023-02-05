@@ -23,7 +23,7 @@ yarn build
 ## TODO
 
 - Styling
-- Dynamic update of asset URLs from manifest file
+- ~~Dynamic update of asset URLs from manifest file~~
 - Server-side rendering of React
 - Exclude specific nodes from uSync
 - Measurement conversion

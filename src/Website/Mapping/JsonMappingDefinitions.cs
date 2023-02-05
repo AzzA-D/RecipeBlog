@@ -1,4 +1,5 @@
 ﻿using Umbraco.Cms.Core.Mapping;
+using Umbraco.Cms.Core.Models;
 using Website.Models.Generated;
 using Website.Models.Json;
 
@@ -87,6 +88,15 @@ namespace Website.Mapping
                 (source, target, context) =>
                 {
                     target.Description = source.Description.ToHtmlString();
+                }
+            );
+
+            mapper.Define<MediaWithCrops<Image>, ImageJson>(
+                (source, context) => new ImageJson(),
+                (source, target, context) =>
+                {
+                    target.Url = source.Url();
+                    target.AltText = source.Content.AltText;
                 }
             );
         }
