@@ -14,7 +14,7 @@ yarn
 yarn start
 ```
 
-To build the front-end of the site for local development, the following will build:
+To build the front-end of the site for local development, run the following:
 ```
 cd src/js/recipe-blog
 yarn build
@@ -29,9 +29,12 @@ yarn build
 - Measurement conversion
 - 'Do not sleep' mode for mobile to prevent the screen from turning off
 - Randomly surface recipes on home page
+- Pinned / common recipes on home page
 - 'In season' date range for ingredients to flag recipes in season
 - Related recipes - 'Things that go with {X}}'
 - Block list editor for Recipe body
 - ~~Azure blob storage~~ 
 - 'Category' pages containing recipes built from list of tags tag
 - Init header and footer as part of Umbraco site
+- 'Bookmarks' page with links to recipes to try
+- Checkbox to toggle visibility of recipe page
