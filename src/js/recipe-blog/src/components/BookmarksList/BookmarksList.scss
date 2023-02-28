@@ -1,0 +1,17 @@
+@use "../../styles/functions" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/colours";
+@use '../../styles/fonts';
+
+.bookmarks-list {
+    font-family: fonts.$primary;
+    font-size: toRem(fonts.$mobile-body-size);
+
+    &__section {
+        margin-top: toRem(36);
+    }
+
+    &__item + &__item {
+        margin-top: toRem(24);
+    }
+}

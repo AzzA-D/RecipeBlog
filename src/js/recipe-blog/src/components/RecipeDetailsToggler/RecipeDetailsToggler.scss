@@ -14,7 +14,8 @@ $button-radius: 25px;
 
     &__ingredients,
     &__method {
-        height: 100%;
+        padding: toRem(36) 0;
+        height: calc(100% - toRem(72));
         overflow-y: scroll;
     }
 
@@ -71,6 +72,8 @@ $button-radius: 25px;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
             border-right-width: 0;
+
+            cursor: pointer;
 
             > span {
                 writing-mode: vertical-lr;
