@@ -1,5 +1,7 @@
 ﻿using Umbraco.Cms.Core.Mapping;
 using Umbraco.Cms.Core.Models;
+using Website.Controllers;
+using Website.Models.Forms;
 using Website.Models.Generated;
 using Website.Models.Json;
 
@@ -99,6 +101,50 @@ namespace Website.Mapping
                     target.AltText = source.Content.AltText;
                 }
             );
+
+            mapper.Define<BookmarksPage, BookmarksPageJson>(
+                (source, context) => new BookmarksPageJson(),
+                (source, target, context) =>
+                {
+                    target.Heading = source.Name;
+                    target.BookmarkSections = mapper.MapEnumerable<BookmarkSection, BookmarkSectionJson>(source.Children<BookmarkSection>());
+
+                    target.FormModel = new CreateBookmarkFormModel
+                    {
+                        SubmitUrl = BookmarksApiController.CreateUrl,
+                        BookmarksPageId = source.Key,
+                        Sections = mapper.MapEnumerable<BookmarkSection, BookmarkSectionFormModel>(source.Children<BookmarkSection>())
+                    };
+                }
+            );
+
+            mapper.Define<BookmarkSection, BookmarkSectionJson>(
+                (source, context) => new BookmarkSectionJson(),
+                (source, target, context) =>
+                {
+                    target.Heading = source.Name;
+                    target.Bookmarks = mapper.MapEnumerable<Bookmark, BookmarkJson>(source.Children<Bookmark>());
+                }
+            );
+
+            mapper.Define<Bookmark, BookmarkJson>(
+                (source, context) => new BookmarkJson(),
+                (source, target, context) =>
+                {
+                    target.Name = source.Name;
+                    target.Url = source.Url;
+                }
+            );
+
+            mapper.Define<BookmarkSection, BookmarkSectionFormModel>(
+                (source, context) => new BookmarkSectionFormModel(),
+                (source, target, context) =>
+                {
+                    target.SectionId = source.Key;
+                    target.Heading = source.Name;
+                }
+            );
+
         }
     }
 }

@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<BookmarksPage>
+@using Umbraco.Cms.Core.Mapping;
+@using Website.Models.Json;
+@inject IUmbracoMapper _mapper;
+
+@{
+    Layout = "~/Views/Layouts/RootLayout.cshtml";
+    var json = _mapper.Map<BookmarksPageJson>(Model);
+}
+
+<div id="react-root" data-page="BookmarksPage" data-props='@Json.Serialize(json)'>Please enable JavaScript to view this content</div>

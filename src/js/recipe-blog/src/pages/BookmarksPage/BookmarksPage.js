@@ -8,10 +8,10 @@ function BookmarksPage(props) {
         <div>
             <PageHeading text={props.heading} subheading={props.subheading} level={1} />
             <main>
-                {props.bookmarksLists && props.bookmarksLists.length > 0 &&
+                {props.bookmarkSections && props.bookmarkSections.length > 0 &&
                     <Grid>
-                        {props.bookmarksLists.map((bookmarksList, i) =>
-                            <BookmarksList {...bookmarksList} key={i} />
+                        {props.bookmarkSections.map((bookmarkSection, i) =>
+                            <BookmarksList {...bookmarkSection} key={i} />
                         )}
                     </Grid>
                 }

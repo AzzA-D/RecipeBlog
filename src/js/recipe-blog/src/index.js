@@ -43,6 +43,7 @@ switch (pageAttr) {
                 <Footer />
             </React.StrictMode>
         );
+        break;
     default:
         root.render(
             <React.StrictMode>

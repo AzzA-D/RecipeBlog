@@ -12,7 +12,7 @@ function BookmarksList(props) {
                 {props.bookmarks.map((bookmark, i) =>
                     <li className='bookmarks-list__item' key={i}>
                         <div className='bookmark-card'>
-                            <strong>{bookmark.name}</strong> | <a href={bookmark.url} target='_blank'>{bookmark.url}</a>
+                            <strong>{bookmark.name}</strong> | <a href={bookmark.url} target='_blank' rel="noreferrer">{bookmark.url}</a>
                         </div>
                     </li>
                 )}
