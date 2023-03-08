@@ -20,7 +20,7 @@ namespace Website.Models.Generated
 {
 	/// <summary>Bookmarks Page</summary>
 	[PublishedModel("bookmarksPage")]
-	public partial class BookmarksPage : PublishedContentModel, IPageBase
+	public partial class BookmarksPage : PublishedContentModel, ICreateBookmarkForm, IPageBase
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -48,6 +48,30 @@ namespace Website.Models.Generated
 		}
 
 		// properties
+
+		///<summary>
+		/// Page Heading: Falls back to the name of the page if nothing is set
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("pageHeading")]
+		public virtual string PageHeading => this.Value<string>(_publishedValueFallback, "pageHeading");
+
+		///<summary>
+		/// Subheading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("subheading")]
+		public virtual string Subheading => this.Value<string>(_publishedValueFallback, "subheading");
+
+		///<summary>
+		/// Heading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("createBookmarkFormHeading")]
+		public virtual string CreateBookmarkFormHeading => global::Website.Models.Generated.CreateBookmarkForm.GetCreateBookmarkFormHeading(this, _publishedValueFallback);
 
 		///<summary>
 		/// SEO Description: The meta description for this page.

@@ -5,9 +5,10 @@ namespace Website.Models.Json
     public class BookmarksPageJson
     {
         public string Heading { get; set; }
+        public string Subheading { get; set; }
         public List<BookmarkSectionJson> BookmarkSections { get; set; } = new List<BookmarkSectionJson>();
 
-        public CreateBookmarkFormModel FormModel { get; set; }
+        public CreateBookmarkFormModel CreateBookmarkFormModel { get; set; }
     }
 
     public class BookmarkSectionJson

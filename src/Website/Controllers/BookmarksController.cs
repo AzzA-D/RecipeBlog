@@ -5,16 +5,16 @@ using Website.Services;
 
 namespace Website.Controllers
 {
-    public class BookmarksApiController : UmbracoApiController
+    public class BookmarksController : UmbracoApiController
     {
         private readonly BookmarksService _bookmarksService;
 
-        public BookmarksApiController(BookmarksService bookmarksService)
+        public BookmarksController(BookmarksService bookmarksService)
         {
             _bookmarksService = bookmarksService;
         }
 
-        public const string CreateUrl = "~/umbraco/api/bookmarks/create";
+        public const string CreateUrl = "/umbraco/api/bookmarks/create";
         [HttpPost]
         public bool Create(CreateBookmarkRequest model)
         {

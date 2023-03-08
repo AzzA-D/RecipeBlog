@@ -31,6 +31,21 @@ function BookmarksPageExample() {
                 }
 
             ]}
+            createBookmarkFormModel={{
+                bookmarksPageId: "{SOME-BOOKMARKS-PAGE-GUID}",
+                heading: "New bookmark",
+                submitUrl: undefined,
+                sections: [
+                    {
+                        sectionId: "{SOME-GUID-SECTION-1}",
+                        heading: "An example section"
+                    },
+                    {
+                        sectionId: "{SOME-GUID-SECTION-2}",
+                        heading: "Another example section"
+                    }
+                ]
+            }}
         />
     );
 }

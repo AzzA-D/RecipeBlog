@@ -4,6 +4,7 @@ namespace Website.Models.Forms
 {
     public class CreateBookmarkFormModel
     {
+        public string Heading { get; set; }
         public string SubmitUrl { get; set; }
         public Guid BookmarksPageId { get; set; }
         public List<BookmarkSectionFormModel> Sections { get; set; } = new List<BookmarkSectionFormModel>();

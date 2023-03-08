@@ -15,7 +15,7 @@ namespace Website.Mapping
                 (source, context) => new HomePageJson(),
                 (source, target, context) =>
                 {
-                    target.Heading = source.PageHeading;
+                    target.Heading = source.PageHeading ?? source.Name;
 
                     target.RecipesListsHeading = source.RecipeListHeading;
                     var recipePages = source.DescendantsOfType(RecipePage.ModelTypeAlias).Cast<RecipePage>().ToList();
@@ -106,12 +106,14 @@ namespace Website.Mapping
                 (source, context) => new BookmarksPageJson(),
                 (source, target, context) =>
                 {
-                    target.Heading = source.Name;
+                    target.Heading = source.PageHeading ?? source.Name;
+                    target.Subheading = source.Subheading;
                     target.BookmarkSections = mapper.MapEnumerable<BookmarkSection, BookmarkSectionJson>(source.Children<BookmarkSection>());
 
-                    target.FormModel = new CreateBookmarkFormModel
+                    target.CreateBookmarkFormModel = new CreateBookmarkFormModel
                     {
-                        SubmitUrl = BookmarksApiController.CreateUrl,
+                        Heading = source.CreateBookmarkFormHeading,
+                        SubmitUrl = BookmarksController.CreateUrl,
                         BookmarksPageId = source.Key,
                         Sections = mapper.MapEnumerable<BookmarkSection, BookmarkSectionFormModel>(source.Children<BookmarkSection>())
                     };

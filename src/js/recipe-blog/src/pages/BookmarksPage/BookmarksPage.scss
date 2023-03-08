@@ -1,0 +1,46 @@
+@use "../../styles/functions" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/colours";
+@use '../../styles/fonts';
+
+.bookmarks-page {
+    & main {}
+}
+
+$button-radius: 25px;
+
+.bookmark-form-toggler {
+    z-index: 900;
+
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: toRem(64);
+
+    display: flex;
+    justify-content: center;
+
+    & button {
+        z-index: 2;
+
+        width: calc(100% - toRem($mobile-grid-margin * 2));
+        max-width: toRem(450);
+        height: calc(100% - toRem(20));
+
+        margin: 0 toRem($mobile-grid-margin);
+
+        color: colours.$green;
+        background: colours.$white;
+
+        transition: all 0.2s $transition;
+
+        border: colours.$green 2px solid;
+        border-radius: $button-radius;
+
+        cursor: pointer;
+    }
+
+    &.open {
+        position: absolute;
+    }
+}

@@ -7,6 +7,7 @@ namespace Website.App_Start
         public static void RegisterServices(IServiceCollection services)
         {
             services.AddScoped<AssetsService>();
+            services.AddScoped<BookmarksService>();
         }
     }
 }

@@ -36,5 +36,6 @@ yarn build
 - ~~Azure blob storage~~ 
 - 'Category' pages containing recipes built from list of tags tag
 - Init header and footer as part of Umbraco site
-- 'Bookmarks' page with links to recipes to try
+- ~~'Bookmarks' page with links to recipes to try~~
 - Checkbox to toggle visibility of recipe page
+- Accessibility on form
