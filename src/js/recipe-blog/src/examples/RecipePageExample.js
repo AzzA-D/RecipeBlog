@@ -12,169 +12,46 @@ function RecipePageExample() {
                     {
                         heading: undefined,
                         ingredients: [
-                            {
-                                ingredient: 'Butternut squash',
-                                amount: '4',
-                                measurement: 'cups'
-                            },
-                            {
-                                ingredient: 'Red lentils',
-                                amount: '2',
-                                measurement: 'cups'
-                            },
-                            {
-                                ingredient: 'Onion',
-                                amount: '1',
-                            },
-                            {
-                                ingredient: 'Garlic',
-                                amount: '2',
-                                measurement: 'cloves'
-                            },
-                            {
-                                ingredient: 'Red chilli peppers',
-                                amount: '2',
-                            },
-                            {
-                                ingredient: 'Fresh ginger',
-                                amount: '2',
-                                measurement: 'tablespoons'
-                            },
-                            {
-                                ingredient: 'Curry powder',
-                                amount: '1',
-                                measurement: 'tablespoon'
-                            },
-                            {
-                                ingredient: 'Ground coriander',
-                                amount: '2',
-                                measurement: 'teaspoons'
-                            },
-                            {
-                                ingredient: 'Garam masala',
-                                amount: '2',
-                                measurement: 'teaspoons'
-                            },
-                            {
-                                ingredient: 'Turmeric',
-                                amount: '2',
-                                measurement: 'teaspoons'
-                            },
-                            {
-                                ingredient: 'Ground cumin',
-                                amount: '2',
-                                measurement: 'teaspoons'
-                            },
-                            {
-                                ingredient: 'Salt',
-                                amount: '1',
-                                measurement: 'teaspoon'
-                            },
-                            {
-                                ingredient: 'Coconut milk',
-                                amount: '1',
-                                measurement: 'can'
-                            },
-                            {
-                                ingredient: 'Diced tomatoes',
-                                amount: '1',
-                                measurement: 'can'
-                            },
-                            {
-                                ingredient: 'Stock',
-                                amount: '750',
-                                measurement: 'ml'
-                            }
+                            '4 cups butternut squash',
+                            '2 cups red lentils',
+                            '1 onion',
+                            '2 garlic cloves',
+                            '2 red chili peppers',
+                            '2 tbsp fresh ginger',
+                            '1 tbsp curry powder',
+                            '2 tsp ground coriander',
+                            '2 tsp garam masala',
+                            '2 tsp ground cumin',
+                            '1 tsp salt',
+                            '1 can coconut milk',
+                            '1 can diced tomatoes',
+                            '750ml stock'
                         ]
                     },
                     {
                         heading: 'After cooking',
                         ingredients: [
-                            {
-                                ingredient: 'lime juice',
-                                amount: '1/2'
-                            },
-                            {
-                                ingredient: 'salt'
-                            }
+                            '1/2 lime juice',
+                            'salt'
                         ]
                     },
                     {
                         heading: 'Some more example ingredients',
                         ingredients: [
-                            {
-                                ingredient: 'Butternut squash',
-                                amount: '4',
-                                measurement: 'cups'
-                            },
-                            {
-                                ingredient: 'Red lentils',
-                                amount: '2',
-                                measurement: 'cups'
-                            },
-                            {
-                                ingredient: 'Onion',
-                                amount: '1',
-                            },
-                            {
-                                ingredient: 'Garlic',
-                                amount: '2',
-                                measurement: 'cloves'
-                            },
-                            {
-                                ingredient: 'Red chilli peppers',
-                                amount: '2',
-                            },
-                            {
-                                ingredient: 'Fresh ginger',
-                                amount: '2',
-                                measurement: 'tablespoons'
-                            },
-                            {
-                                ingredient: 'Curry powder',
-                                amount: '1',
-                                measurement: 'tablespoon'
-                            },
-                            {
-                                ingredient: 'Ground coriander',
-                                amount: '2',
-                                measurement: 'teaspoons'
-                            },
-                            {
-                                ingredient: 'Garam masala',
-                                amount: '2',
-                                measurement: 'teaspoons'
-                            },
-                            {
-                                ingredient: 'Turmeric',
-                                amount: '2',
-                                measurement: 'teaspoons'
-                            },
-                            {
-                                ingredient: 'Ground cumin',
-                                amount: '2',
-                                measurement: 'teaspoons'
-                            },
-                            {
-                                ingredient: 'Salt',
-                                amount: '1',
-                                measurement: 'teaspoon'
-                            },
-                            {
-                                ingredient: 'Coconut milk',
-                                amount: '1',
-                                measurement: 'can'
-                            },
-                            {
-                                ingredient: 'Diced tomatoes',
-                                amount: '1',
-                                measurement: 'can'
-                            },
-                            {
-                                ingredient: 'Stock',
-                                amount: '750',
-                                measurement: 'ml'
-                            }
+                            '4 cups butternut squash',
+                            '2 cups red lentils',
+                            '1 onion',
+                            '2 garlic cloves',
+                            '2 red chili peppers',
+                            '2 tbsp fresh ginger',
+                            '1 tbsp curry powder',
+                            '2 tsp ground coriander',
+                            '2 tsp garam masala',
+                            '2 tsp ground cumin',
+                            '1 tsp salt',
+                            '1 can coconut milk',
+                            '1 can diced tomatoes',
+                            '750ml stock'
                         ]
                     },
                 ]

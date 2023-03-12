@@ -21,9 +21,11 @@ function RecipeCard(props) {
                     level={3}
                     theme={Heading.Themes.Secondary}
                 />
-                <BodyText
-                    text={props.description}
-                />
+                {props.description &&
+                    <BodyText
+                        text={props.description}
+                    />
+                }
                 <Button
                     text="View recipe"
                     href={props.url}

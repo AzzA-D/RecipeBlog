@@ -62,17 +62,7 @@ namespace Website.Mapping
                 (source, target, context) =>
                 {
                     target.Heading = source.Heading;
-                    target.Ingredients = mapper.MapEnumerable<Ingredient, IngredientJson>(source.Ingredients.Select(i => i.Content as Ingredient));
-                }
-            );
-
-            mapper.Define<Ingredient, IngredientJson>(
-                (source, context) => new IngredientJson(),
-                (source, target, context) =>
-                {
-                    target.Ingredient = source.IngredientName;
-                    target.Measurement = source.Measurement;
-                    target.Amount = source.Amount;
+                    target.Ingredients = source.IngredientsNew.ToList();
                 }
             );
 

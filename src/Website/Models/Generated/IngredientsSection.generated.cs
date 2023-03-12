@@ -58,11 +58,19 @@ namespace Website.Models.Generated
 		public virtual string Heading => this.Value<string>(_publishedValueFallback, "heading");
 
 		///<summary>
-		/// Ingredients
+		/// Ingredients (old)
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("ingredients")]
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Ingredients => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "ingredients");
+
+		///<summary>
+		/// Ingredients (new)
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "11.1.0+bad9148")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("ingredientsNew")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> IngredientsNew => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "ingredientsNew");
 	}
 }

@@ -11,13 +11,6 @@ namespace Website.Models.Json
     public class IngredientsSectionJson
     {
         public string Heading { get; set; }
-        public List<IngredientJson> Ingredients { get; set; }
-    }
-
-    public class IngredientJson
-    {
-        public string Ingredient { get; set; }
-        public string Amount { get; set; }
-        public string Measurement { get; set; }
+        public List<string> Ingredients { get; set; }
     }
 }

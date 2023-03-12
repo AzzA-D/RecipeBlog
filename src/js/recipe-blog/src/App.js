@@ -8,7 +8,7 @@ function App() {
     return (
         <div className="App">
             <Header websiteName="Aaron's Recipes" />
-            <BookmarksPageExample />
+            <RecipePageExample />
             <Footer />
         </div>
     );

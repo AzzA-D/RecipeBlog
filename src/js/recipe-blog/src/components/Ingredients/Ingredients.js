@@ -21,19 +21,13 @@ function IngredientsSection(props) {
             <ul className="ingredients-list">
                 {props.ingredients.map((ingredient, i) =>
                     <li className="ingredients-list__item" key={i}>
-                        <Ingredient {...ingredient} />
+                        <p className="ingredient">
+                            {ingredient}
+                        </p>
                     </li>
                 )}
             </ul>
         </div>
-    );
-}
-
-function Ingredient(props) {
-    return (
-        <p className="ingredient">
-            {props.amount} {props.measurement} {props.ingredient}
-        </p>
     );
 }
 
