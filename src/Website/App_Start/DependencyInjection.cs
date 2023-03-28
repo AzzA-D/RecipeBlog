@@ -8,6 +8,7 @@ namespace Website.App_Start
         {
             services.AddScoped<AssetsService>();
             services.AddScoped<BookmarksService>();
+            services.AddScoped<RecipeService>();
         }
     }
 }

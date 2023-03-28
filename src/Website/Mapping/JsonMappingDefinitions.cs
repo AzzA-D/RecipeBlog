@@ -15,7 +15,7 @@ namespace Website.Mapping
                 (source, context) => new HomePageJson(),
                 (source, target, context) =>
                 {
-                    target.Heading = source.PageHeading ?? source.Name;
+                    target.Heading = source.PageHeading.IsNullOrWhiteSpace() ? source.Name : source.PageHeading;
 
                     target.RecipesListsHeading = source.RecipeListHeading;
                     var recipePages = source.DescendantsOfType(RecipePage.ModelTypeAlias).Cast<RecipePage>().ToList();
@@ -96,7 +96,7 @@ namespace Website.Mapping
                 (source, context) => new BookmarksPageJson(),
                 (source, target, context) =>
                 {
-                    target.Heading = source.PageHeading ?? source.Name;
+                    target.Heading = source.PageHeading.IsNullOrWhiteSpace() ? source.Name : source.PageHeading;
                     target.Subheading = source.Subheading;
                     target.BookmarkSections = mapper.MapEnumerable<BookmarkSection, BookmarkSectionJson>(source.Children<BookmarkSection>());
 
@@ -137,6 +137,14 @@ namespace Website.Mapping
                 }
             );
 
+            mapper.Define<CategoryPage, CategoryPageJson>(
+                (source, context) => new CategoryPageJson(),
+                (source, target, context) =>
+                {
+                    target.Heading = source.PageHeading.IsNullOrWhiteSpace() ? source.Name : source.PageHeading;
+                    target.Description = source.Subheading;
+                }
+            );
         }
     }
 }

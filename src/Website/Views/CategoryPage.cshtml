@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<CategoryPage>
+@using Umbraco.Cms.Core.Mapping;
+@using Website.Models.Json;
+@using Website.Services;
+@inject IUmbracoMapper _mapper;
+@inject RecipeService _recipeService;
+
+@{
+    Layout = "~/Views/Layouts/RootLayout.cshtml";
+    var json = _mapper.Map<CategoryPageJson>(Model);
+    json.Recipes = _recipeService.GetByCategories(Model.Root().Key, Model.Categories.Select(c => c.Key))
+                                 .Select(c => _mapper.Map<RecipeCardJson>(c));
+}
+
+<div id="react-root" data-page="CategoryPage" data-props='@Json.Serialize(json)'>Please enable JavaScript to view this content</div>

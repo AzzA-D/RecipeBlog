@@ -8,6 +8,7 @@ import RecipePage from './pages/RecipePage/RecipePage';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import BookmarksPage from './pages/BookmarksPage/BookmarksPage';
+import CategoryPage from './pages/CategoryPage/CategoryPage';
 
 const rootNode = document.getElementById('react-root');
 const pageAttr = rootNode.getAttribute("data-page");
@@ -44,6 +45,16 @@ switch (pageAttr) {
             </React.StrictMode>
         );
         break;
+    case 'CategoryPage':
+        root.render(
+            <React.StrictMode>
+                <Header websiteName="Whistle Kitchen" />
+                <CategoryPage {...props} />
+                <Footer />
+            </React.StrictMode>
+        );
+        break;
+    
     default:
         root.render(
             <React.StrictMode>
