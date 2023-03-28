@@ -7,7 +7,7 @@ import BookmarksPageExample from "./examples/BookmarksPageExample";
 function App() {
     return (
         <div className="App">
-            <Header websiteName="Aaron's Recipes" />
+            <Header websiteName="Whistle Kitchen" />
             <RecipePageExample />
             <Footer />
         </div>

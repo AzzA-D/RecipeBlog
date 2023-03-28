@@ -20,7 +20,7 @@ switch (pageAttr) {
     case 'HomePage':
         root.render(
             <React.StrictMode>
-                <Header websiteName="A Recipe Blog" />
+                <Header websiteName="Whistle Kitchen" />
                 <HomePage {...props} />
                 <Footer />
             </React.StrictMode>
@@ -29,7 +29,7 @@ switch (pageAttr) {
     case 'RecipePage':
         root.render(
             <React.StrictMode>
-                <Header websiteName="A Recipe Blog" />
+                <Header websiteName="Whistle Kitchen" />
                 <RecipePage {...props} />
                 <Footer />
             </React.StrictMode>
@@ -38,7 +38,7 @@ switch (pageAttr) {
     case 'BookmarksPage':
         root.render(
             <React.StrictMode>
-                <Header websiteName="A Recipe Blog" />
+                <Header websiteName="Whistle Kitchen" />
                 <BookmarksPage {...props} />
                 <Footer />
             </React.StrictMode>
