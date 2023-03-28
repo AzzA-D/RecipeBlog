@@ -96,4 +96,32 @@ $button-radius: 25px;
             }
         }
     }
+
+    @include desktop {
+        height: unset;
+        display: flex;
+
+        &__ingredients,
+        &__method {
+            margin: 0;
+            position: unset;
+            top: 0;
+            left: 0;
+            overflow-y: unset;
+            display: block;
+        }
+
+        &__ingredients {
+            width: 34%;
+        }
+
+        &__method {
+            width: 66%;
+        }
+
+        &__open-button {
+            display: none;
+        }
+    }
+
 }
