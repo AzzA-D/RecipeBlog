@@ -1,9 +1,32 @@
 @use '../../styles/functions' as *;
+@use '../../styles/breakpoints' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/colours';
+@use '../../styles/fonts';
 
 .recipe-list {
-    margin: toRem(28) 0;
+    padding-top: toRem(28);
+
+    &__wrapper {
+        margin: toRem(28) 0;
+    }
 
     .recipe-card + .recipe-card {
         margin-top: toRem(16);
+    }
+
+    @include desktop {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: toRem(32);
+        
+        .recipe-card {
+            width: calc(50% - toRem(32));
+        }
+
+        .recipe-card + .recipe-card {
+            margin-top: 0;
+        }
     }
 }
