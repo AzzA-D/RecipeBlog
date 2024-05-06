@@ -1,20 +1,19 @@
 @use '../../styles/functions' as *;
 @use '../../styles/breakpoints' as *;
+@use '../../styles/variables' as *;
 @use '../../styles/colours';
 @use '../../styles/fonts';
 
-.footer {
-    background-color: colours.$blue;
-    z-index: 1000;
-    position: relative;
-    
-    &__body {
-        padding: toRem(12);
-    }
+.recipe-details-card {
+    margin: toRem(24) toRem($mobile-grid-margin);
 
-    .copyright {
-        text-align: right;
+    padding: toRem(24) toRem(12);
+    border-radius: toRem(24);
+
+
+    &__body {
         color: colours.$white;
         font-family: fonts.$primary;
+        font-weight: lighter;
     }
 }

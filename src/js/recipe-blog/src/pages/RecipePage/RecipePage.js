@@ -17,11 +17,11 @@ function RecipePage(props) {
                 />
                 {/* TODO Notes */}
             </main>
-            {props.moreRecipes.length > 0 &&
+            {/* {props.moreRecipes.length > 0 &&
                 <Grid>
                     <RecipeList heading={props.moreRecipesHeading} recipes={props.moreRecipes} />
                 </Grid>
-            }
+            } */}
         </div>
     );
 }
